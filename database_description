@@ -1,0 +1,19 @@
+1. Team Model: Represents basketball teams with fields for name and a unique ID.
+
+2. Player Model: Represents individual players with fields for ID, name, and a ForeignKey to the team they belong to.
+
+3. Game Model: Captures details of individual games, including the game date and ForeignKey to both the home and away teams.
+
+4. PlayerStats Model: Holds statistics for players in a particular game. Fields include references to the player, game, and team involved, along with various stats like points, assists, rebounds, etc.
+
+5. Shot Model: Represents individual shots taken by a player in a game. Contains information on whether the shot was made and the location coordinates, along with a ForeignKey linking to the PlayerStats model.
+
+The relationships between these models are as follows:
+
+1. Each Team can have multiple Player objects.
+
+2. Each Player may have multiple PlayerStats representing different games.
+
+3. Each Game connects two Team objects (home and away) and may be linked with multiple PlayerStats.
+
+4. Each PlayerStats is linked with multiple Shot objects detailing individual shots in the game.

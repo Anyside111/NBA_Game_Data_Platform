@@ -1,0 +1,113 @@
+<div class="placeholder">
+  <div class="container">
+    <div class="row">
+      <!-- left section -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="playerSelect" class="form-label">Select Player:</label>
+          <select id="playerSelect" [(ngModel)]="selectedPlayer" (change)="onPlayerChange()"
+                  class="form-select">
+            <option *ngFor="let player of playerList" [ngValue]="player">{{player.id}}
+              - {{player.name}}</option>
+          </select>
+        </div>
+
+        <div class="mb-3" *ngIf="relatedGames && relatedGames.length > 0">
+          <label for="gameSelect" class="form-label">Select Game:</label>
+          <select id="gameSelect" [(ngModel)]="selectedGame" (ngModelChange)="onGameChange(selectedGame)" class="form-select">
+            <option *ngFor="let game of relatedGames" [ngValue]="game">{{game.id}} - {{game.date}}</option>
+          </select>
+        </div>
+
+
+        <!-- Game Summary Table -->
+        <div *ngIf="selectedGame">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Date</td>
+              <td>{{ selectedGame.date }}</td>
+            </tr>
+            <tr>
+              <td>Team</td>
+              <td>{{ selectedGame.team }}</td>
+            </tr>
+            <tr>
+              <td>Starter</td>
+              <td>{{ selectedGame.isStarter }}</td>
+            </tr>
+            <tr>
+              <td>Minutes</td>
+              <td>{{ selectedGame.minutes }}</td>
+            </tr>
+            <tr>
+              <td>Points</td>
+              <td>{{ selectedGame.points }}</td>
+            </tr>
+            <tr>
+              <td>Assists</td>
+              <td>{{ selectedGame.assists }}</td>
+            </tr>
+            <tr>
+              <td>OffensiveRebounds</td>
+              <td>{{ selectedGame.offensiveRebounds }}</td>
+            </tr>
+            <tr>
+              <td>DefensiveRebounds</td>
+              <td>{{ selectedGame.defensiveRebounds }}</td>
+            </tr>
+            <!-- ... more options -->
+            </tbody>
+          </table>
+        </div>
+
+        <!--                &lt;!&ndash; Shots Data Table &ndash;&gt;-->
+        <!--                <div *ngIf="selectedGame">-->
+        <!--                    <h2>Shots Data for {{ selectedGame.date }}</h2>-->
+
+        <!--                    <table class="table table-bordered table-striped">-->
+        <!--                        <thead>-->
+        <!--                        <tr>-->
+        <!--                            <th>Make</th>-->
+        <!--                            <th>Location X</th>-->
+        <!--                            <th>Location Y</th>-->
+        <!--                        </tr>-->
+        <!--                        </thead>-->
+        <!--                        <tbody>-->
+        <!--                        <tr *ngFor="let shot of getSelectedGameShots()">-->
+        <!--                            <td>{{ shot.isMake ? 'Yes' : 'No' }}</td>-->
+        <!--                            <td>{{ shot.locationX }}</td>-->
+        <!--                            <td>{{ shot.locationY }}</td>-->
+        <!--                        </tr>-->
+        <!--                        </tbody>-->
+        <!--                    </table>-->
+        <!--                </div>-->
+
+      </div>
+
+      <!-- right section -->
+      <div class="court-container">
+        <svg #courtSvg viewBox="0 0 1455 1365" preserveAspectRatio="xMinYMin meet">
+          <image href="/assets/court_diagram.jpg" width="1455" height="1365"/>
+          <circle *ngFor="let shot of getSelectedGameShots()"
+                  [attr.cx]="getShotPixelCoordinates(shot).x"
+                  [attr.cy]="getShotPixelCoordinates(shot).y"
+                  r="5"
+                  [attr.fill]="shot.isMake ? 'green' : 'red'"
+                  class="shot-dot">
+          </circle>
+        </svg>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
