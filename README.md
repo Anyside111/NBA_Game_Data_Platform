@@ -1,8 +1,8 @@
-![Query_result_screenshot](/Visulization/Query_result_screenshot.png)
+![Query_result_screenshot](/visulization/Query_result_screenshot.png)
 
-![Django_framework_result](/Visulization/Django_framework_result.png)
+![Django_framework_result](/visulization/Django_framework_result.png)
 
-![System_design_diagram](/Visulization/System_design_diagram.png)
+![System_design_diagram](/visulization/System_design_diagram.png)
 
 
 ### 1. Backend Engineering
