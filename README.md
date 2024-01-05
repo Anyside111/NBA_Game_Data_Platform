@@ -1,5 +1,5 @@
 ![Django_framework_result](/Django_framework_result.png)
-![Query result screenshot](/Query result screenshot.png)
+![Query_result_screenshot](/Query_result_screenshot.png)
 
 ### 1. Backend Engineering
 
