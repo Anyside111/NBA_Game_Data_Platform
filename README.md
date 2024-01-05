@@ -1,9 +1,11 @@
+![Query_result_screenshot](/Query_result_screenshot.png)
+
+![Django_framework_result](/Django_framework_result.png)
+
 
 ### 1. Backend Engineering
 
 * Architect and implement a normalized PostgreSQL database to store the data provided in `backend/raw_data`. All information from the original data should be accessible via the database.
-
-* Write a brief description of your database architecture (<250 words). Feel free to provide a visual representation as an aide. Submit relevant responses in the `written_responses` folder provided.
 
 * In the programming language of your choice, write a process to load the dataset into your PostgreSQL database. Ensure that this process can run repeatedly without duplicating or obscuring references in the database. Include the source code of your process in the `backend/scripts` folder. Note: You can feel free to utilize the power of Django models and migrations to achieve this step.
 
