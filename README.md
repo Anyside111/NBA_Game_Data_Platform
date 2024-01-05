@@ -1,6 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/b8Jjz3kB)
-
-# OKC Technical Project Deliverable
 
 ### 1. Backend Engineering
 
@@ -91,11 +88,3 @@ npm start
 ```
 The frontend should run on http://localhost:4200/. Visit this address to see the app in your browser.
 
-
-# SUBMISSION.md
-Please fill out the SUBMISSION.md file to ensure we have your name attached to the project.
-
-
-# Questions?
-
-Email datasolutions@okcthunder.com
