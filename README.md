@@ -1,4 +1,4 @@
-![Query_result_screenshot](/visulization/Query_result_screenshot.png)
+![Query_result_screenshot](/Query_result_screenshot.png)
 
 ![Django_framework_result](/visulization/Django_framework_result.png)
 
